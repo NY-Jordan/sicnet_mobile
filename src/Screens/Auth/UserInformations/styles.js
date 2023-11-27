@@ -20,27 +20,8 @@ export const styles = StyleSheet.create({
         justifyContent : "center",
         alignItems : "center"
     },
-    root: {flex: 1, padding: 20},
-    codeFieldRoot: {marginTop: 20},
-    cell: {
-        width: 40,
-        height: 40,
-        lineHeight: 38,
-        fontSize: 24,
-        borderWidth: 2,
-        borderColor: '#00000030',
-        textAlign: 'center',
-      },
-      focusCell: {
-        borderColor: '#000',
-      },
-    skipBorder : {
-        borderWidth : 2,
-        borderRadius : 20,
-        padding  : 10,
-        paddingLeft : 20,
-        paddingRight : 20
-    },
+    
+   
     authInput : {
         backgroundColor : "white",
         height : 50,

@@ -1,18 +1,19 @@
 import React, { useRef, useState } from 'react'
-import { Box, Button, Divider, FormControl, HStack, Input, Stack, Text, View, WarningOutlineIcon } from 'native-base'
+import { Box, Button, Divider, FormControl, HStack, Input, ScrollView, Stack, Text, View, WarningOutlineIcon } from 'native-base'
 import { styles } from './style'
 import { BoxShadow } from 'react-native-shadow'
 import PhoneInput from 'react-native-phone-number-input'
+import { useNavigation } from '@react-navigation/native';
 import SocialNetwork from '../../../Components/SocialNetwork/SocialNetwork'
 
 
 export default function Login() {
   const phoneInput = useRef(null);
   const [phoneValue, setphoneValue] = useState("");
-  
+  const navigation = useNavigation();
     
   return (
-    <View  >
+    <ScrollView >
       <Box >
         <FormControl isRequired marginTop={10} marginBottom={10}>
             <Stack mx="4">
@@ -51,7 +52,7 @@ export default function Login() {
             </Stack>
         </FormControl>
         <Box style={styles.alignCenter}  >
-              <Button   style={styles.Largebutton} shadow={8} onPress={() => navigation.navigate('Authentification')}>Log In</Button>
+              <Button   style={styles.Largebutton} shadow={8} onPress={() => navigation.navigate('Home')}>Log In</Button>
         </Box>
         <HStack marginTop={'5%'}>
           <Divider  width={"45%"} bgColor={"gray.200"} marginTop={'12px'}></Divider>
@@ -60,6 +61,6 @@ export default function Login() {
         </HStack>
         <SocialNetwork />
       </Box>
-    </View>
+    </ScrollView>
   )
 }

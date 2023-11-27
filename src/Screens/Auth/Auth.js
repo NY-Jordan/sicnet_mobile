@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ArrowBackIcon, Box, View, Text, Pressable } from 'native-base'
+import { ArrowBackIcon, Box, View, Text, Pressable, ScrollView } from 'native-base'
 import { Svg } from 'react-native-svg'
 import { styles } from './style'
 import Login from './Login/Login';
@@ -11,7 +11,7 @@ export default function Auth() {
     const [toggleState, setToggleState] = useState(login);
 
   return (
-    <View style={{ backgroundColor : 'white', height : "100%", padding : 15 }}>
+    <ScrollView style={{ backgroundColor : 'white', height : "100%", padding : 15 }}>
       <Box marginBottom={"15%"}>
         <Box marginLeft={"5%"}> 
             <Text fontSize={"2xl"} >Authentification</Text>
@@ -45,6 +45,6 @@ export default function Auth() {
         </Box>
 
       </Box>
-    </View>
+    </ScrollView>
   )
 }

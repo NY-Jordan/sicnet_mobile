@@ -27,16 +27,6 @@ export const styles = StyleSheet.create({
         paddingLeft : 20,
         paddingRight : 20
     },
-    Largebutton : {
-        margin : 10,
-        width : "80%",
-        borderRadius : 40,
-        height : 50,
-        backgroundColor : "#ffcc00",
-        fontSize : "40px",
-        textAlign : "center"
-        
-    },
     authInput : {
         backgroundColor : "white",
         height : 50,

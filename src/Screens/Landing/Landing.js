@@ -10,7 +10,7 @@ import { imageSliderLandingPage } from '../../data/landing'
 export default function Landing({navigation}) {
   const SCREEN_WIDTH = Dimensions.get('window').width ;
   return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <HStack justifyContent={'space-between'}>
               <Box>
                 <Text fontSize={'3xl'} style={styles.logo}>SicNet</Text>
@@ -20,7 +20,6 @@ export default function Landing({navigation}) {
                   <Text fontSize={'sm'} >Skip</Text>
                 </Box>
               </Link>
-         
             </HStack>
             <View style={styles.alignCenter} marginTop={"8%"}>
                 <Carousel 
@@ -45,6 +44,6 @@ export default function Landing({navigation}) {
             <Box style={styles.alignCenter} >
               <Button   style={styles.Largebutton} shadow={8} onPress={() => navigation.navigate('Authentification')}>Get Started</Button>
             </Box>
-        </View>
+        </ScrollView>
       )
 }
