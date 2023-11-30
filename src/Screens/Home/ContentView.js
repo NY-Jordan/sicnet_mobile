@@ -1,6 +1,6 @@
 import { View, Text, Animated, Dimensions } from 'react-native'
 import React, { useState } from 'react'
-import { Box, Center, Pressable, StatusBar, useColorModeValue } from 'native-base';
+import { Box, Center, Fab, Icon, Pressable, StatusBar, useColorModeValue } from 'native-base';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import ForYou from './Content/ForYou';
 import Following from './Content/Following';
@@ -31,6 +31,7 @@ export default function ContentView() {
     const renderTabBar = props => {
         const inputRange = props.navigationState.routes.map((x, i) => i);
         return <Box flexDirection="row">
+
             {props.navigationState.routes.map((route, i) => {
                 const opacity = props.position.interpolate({
                 inputRange,
@@ -47,16 +48,22 @@ export default function ContentView() {
                             </Pressable>
                     </Box>;
             })
+            
         }
         </Box>;
     };
+    //           
 
-  return <TabView 
+
+  return <>
+        <TabView 
             navigationState={{index,routes}} 
             renderScene={renderScene} 
             renderTabBar={renderTabBar} 
             onIndexChange={setIndex} 
             initialLayout={initialLayout}
             style={{ marginTop: 10}} 
-    />;
+        />
+
+  </>
 }

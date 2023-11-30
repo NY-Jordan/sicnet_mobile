@@ -3,9 +3,12 @@ import { Box,View, Text , HStack, ScrollView, Link, SearchIcon, Image, Divider, 
 import { styles } from './styles'
 import searchIcon from './../../assets/img/searchIcon.png'
 import homeIcon from './../../assets/img/homeIcon.png'
-import MenuIcon from '../../Components/MenuIcon'
+import MenuIcon from '../../Components/Menu'
 import { menuIcons } from '../../data/homeData'
 import ContentView from './ContentView'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faFeather } from '@fortawesome/free-solid-svg-icons'
+import Menu from '../../Components/Menu'
 
 export default function Home() {
   return (
@@ -22,9 +25,7 @@ export default function Home() {
          
         </HStack>
         <HStack space={12} justifyContent={'center'} >
-            {
-                menuIcons.map((item, key) => <MenuIcon key={key} source={item.icon}  notificationNumber={item.notification} />)
-            }
+            <Menu />
         </HStack>
         <Divider marginBottom={2} marginTop={2} />
         {/* avatar and create section */}
@@ -40,20 +41,22 @@ export default function Home() {
             <Box width={'50%'} marginRight={2} backgroundColor={'red.400'} borderRadius={30} display={'flex'} justifyContent={'center'} alignItems={'center'} > 
                 <Pressable display={'flex'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
                     <AddIcon  />
-                   <Text style={{ color : 'white', fontWeight : 'bold' }}> new debate</Text>
+                   <Text style={{ color : 'white', fontWeight : 'bold' }}> New debate</Text>
                 </Pressable>
             </Box>
             <Box width={'50%'}backgroundColor={'#ffcc00'} borderRadius={30} display={'flex'} justifyContent={'center'} alignItems={'center'} >
                 <Pressable display={'flex'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
                   <AddIcon  />
-                   <Text style={{ color : 'white', fontWeight : 'bold' }}> new even</Text>
+                   <Text style={{ color : 'white', fontWeight : 'bold' }}> New even</Text>
                 </Pressable>
             </Box>
             </Box>
         </HStack>
         <ContentView />
-       
+        <Fab renderInPortal={false} shadow={2} placement='top-right' top={"62%"} size="sm" icon={<FontAwesomeIcon color='white'  icon={faFeather} size={25} />} />
+
         
+
      
     </View>
   )
