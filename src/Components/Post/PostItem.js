@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faComment, faRepeat, faShare, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import Video from 'react-native-video'
 
+
 export default function PostItem({content, image, video, StatsReactions}) {
    
   return (

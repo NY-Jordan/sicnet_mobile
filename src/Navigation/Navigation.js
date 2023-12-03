@@ -8,6 +8,10 @@ import PhoneVerification from '../Screens/Auth/PhoneVerification/PhoneVerificati
 import UserInformations from '../Screens/Auth/UserInformations/UserInformations';
 import FavoriteMusic from '../Screens/Auth/FavoriteMusic/FavoriteMusic';
 import Home from '../Screens/Home/Home';
+import Notifications from '../Screens/Notifications/Notifications';
+import Message from '../Screens/Message/Message';
+import Evenements from '../Screens/Evenements/Evenements';
+import Debate from '../Screens/Debate/Debate';
 
 const Stack = createStackNavigator();
 
@@ -17,7 +21,7 @@ export default class Navigation extends Component {
     return (
       <SafeAreaView style={{flex: 1}}>
         <NavigationContainer >
-            <Stack.Navigator initialRouteName='Home'>
+            <Stack.Navigator initialRouteName='Notifications'>
                 <Stack.Screen name="Landing" component={Landing} options={{ headerShown : false }} />
                 {/* Authentification */}
                 <Stack.Screen name="Authentification" component={Auth} options={{ headerShown : false }} />
@@ -26,6 +30,14 @@ export default class Navigation extends Component {
                 <Stack.Screen name="FavoriteMusic" component={FavoriteMusic} options={{ headerShown : false }} />
                 {/* Home screen */}
                 <Stack.Screen name="Home" component={Home} options={{ headerShown : false }} />
+                {/* Notifications screen */}
+                <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown : false }} />
+                {/* Message screen */}
+                <Stack.Screen name="Message" component={Message} options={{ headerShown : false }} />
+                {/* Evenements screen */}
+                <Stack.Screen name="Evenements" component={Evenements} options={{ headerShown : false }} />
+                {/* Debate screen */}
+                <Stack.Screen name="Debate" component={Debate} options={{ headerShown : false }} />
             </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>

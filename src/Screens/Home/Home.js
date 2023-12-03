@@ -1,33 +1,14 @@
 import React from 'react'
 import { Box,View, Text , HStack, ScrollView, Link, SearchIcon, Image, Divider, Avatar, Pressable, AddIcon, Center, Fab, Icon } from 'native-base'
-import { styles } from './styles'
-import searchIcon from './../../assets/img/searchIcon.png'
-import homeIcon from './../../assets/img/homeIcon.png'
-import MenuIcon from '../../Components/Menu'
-import { menuIcons } from '../../data/homeData'
 import ContentView from './ContentView'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFeather } from '@fortawesome/free-solid-svg-icons'
-import Menu from '../../Components/Menu'
+import Header from '../../Components/Header'
 
 export default function Home() {
   return (
     <View backgroundColor={'white'}  height={'1000px'}  paddingLeft={2} paddingRight={2}>
-        <HStack justifyContent={'space-between'}>
-              <Box>
-                <Text fontSize={'3xl'} style={styles.logo}>SicNet</Text>
-              </Box>
-              <Link onPress={() => console.log('skip')} mt="3">
-                <Box display={'flex'} alignItems={'center'}  justifyContent={'center'} borderRadius={30} padding={2} backgroundColor={'gray.300'} borderColor={'gray.200'} borderStyle={'solid'}>
-                  <Image  source={searchIcon} alt='search icon' width={8} height={8} />
-                </Box>
-              </Link>
-         
-        </HStack>
-        <HStack space={12} justifyContent={'center'} >
-            <Menu />
-        </HStack>
-        <Divider marginBottom={2} marginTop={2} />
+        <Header />
         {/* avatar and create section */}
         <HStack>
            <Pressable width={'15%'}>
@@ -54,10 +35,6 @@ export default function Home() {
         </HStack>
         <ContentView />
         <Fab renderInPortal={false} shadow={2} placement='top-right' top={"62%"} size="sm" icon={<FontAwesomeIcon color='white'  icon={faFeather} size={25} />} />
-
-        
-
-     
     </View>
   )
 }
