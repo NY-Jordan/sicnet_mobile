@@ -1,8 +1,14 @@
 import React from 'react'
-import { ArrowBackIcon, Avatar,View, Text , Box, HStack, Pressable, ThreeDotsIcon } from 'native-base'
+import { ArrowBackIcon, Avatar,View, Text , Box, HStack, Pressable, ThreeDotsIcon, useDisclose } from 'native-base'
 import { useNavigation } from '@react-navigation/native';
+import MesageActions from './MesageActions';
 export default function ConversationHeader() {
   const navigation = useNavigation();
+  const {
+    isOpen,
+    onOpen,
+    onClose
+  } = useDisclose();
   return (
     <HStack space={4}>
     <Pressable ml={4} onPress={() => navigation.goBack()}>
@@ -38,9 +44,18 @@ export default function ConversationHeader() {
             </Box>
         }}
     </Pressable>
-    <Pressable  ml={6} padding={4}>
-      <ThreeDotsIcon />
+    <Pressable  ml={6} padding={4} onPress={onOpen}>
+    {({
+          isHovered,
+          isPressed
+      }) => {
+        return <Box  overflow={'hidden'} p={2} borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+                  <ThreeDotsIcon />
+            </Box>
+        }}
+      
     </Pressable>
+    <MesageActions isOpen={isOpen} onClose={onClose} onOpen={onOpen}  />
   </HStack>
   )
 }

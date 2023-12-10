@@ -16,7 +16,7 @@ export default function ConversationItem() {
                 isHovered,
                 isPressed
             }) => {
-        return <HStack space={20} paddingTop={2} paddingBottom={2}  overflow={'hidden'} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "coolGray.100"}>
+        return <HStack space={20}  paddingTop={2} paddingBottom={2}  overflow={'hidden'} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                 <HStack>
                     <Box>
                         <Avatar bg="green.500" size="md" source={{

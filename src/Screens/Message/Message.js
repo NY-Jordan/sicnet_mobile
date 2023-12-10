@@ -1,12 +1,11 @@
-import { View,  } from 'react-native'
 import React from 'react'
 import Header from '../../Components/Header'
-import { Avatar, Box, Text,HStack, Pressable, ScrollView, VStack } from 'native-base'
+import { Avatar, Box, View,Text,HStack, Pressable, ScrollView, VStack } from 'native-base'
 import ConversationItem from '../../Components/ConversationItem'
 
 export default function Message() {
   return (
-    <View>
+    <View  backgroundColor={'white'}>
         <Header />
         <ScrollView>
             <Box mx={4} mb={2}>
