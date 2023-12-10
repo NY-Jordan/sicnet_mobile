@@ -9,8 +9,9 @@ export default function Message() {
     <View>
         <Header />
         <ScrollView>
-            <Box mx={4} mb={8}>
+            <Box mx={4} mb={2}>
                 <Text fontSize={'2xl'} >Messages</Text>
+                
             </Box>
             <VStack>
                     <ConversationItem />

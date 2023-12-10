@@ -3,9 +3,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import 'react-native-gesture-handler';
 import Navigation from './src/Navigation/Navigation';
 import { NativeBaseProvider, extendTheme } from 'native-base';
+import { enableScreens, useScreens } from 'react-native-screens';
 
 export default function App() {
-  const theme = extendTheme({
+  
+ 
+  /*const theme = extendTheme({
     fontConfig: {
       Roboto: {
         100: {
@@ -46,9 +49,9 @@ export default function App() {
       body: "Roboto",
       mono: "Roboto",
     },
-  });
+  });*/
   return (
-   <NativeBaseProvider theme={theme}>
+   <NativeBaseProvider>
       <Navigation />
    </NativeBaseProvider>
   );

@@ -16,9 +16,11 @@ export default function Menu({source, notificationNumber}) {
         'Evenements' : 'Evenements',
         'Debate' : 'Debate',
     };
+
     const colorActive = 'rgb(8, 143, 143)';
 
     const HandleNavigationMenu = (menu) =>{
+        console.log(menu);
         navigation.navigate(menu);
     }
   return (
