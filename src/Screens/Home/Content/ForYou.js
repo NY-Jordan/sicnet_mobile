@@ -5,6 +5,7 @@ import PostItem from '../../../Components/Post/PostItem'
 import { posts } from '../../../data/homeData'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faFeather, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
+import CommentSheets from '../../../Components/Sheets/CommentSheets'
 
 export default function ForYou() {
   return (
@@ -18,8 +19,10 @@ export default function ForYou() {
                 image={post.image}
                 video={post.video}
                 StatsReactions={post.StatsReactions}
+                commentsId={"comments"+index}
                 />
                 <Divider my={2} />
+                <CommentSheets sheetId={"comments"+index} />
                 </>)
             }
         </ScrollView>

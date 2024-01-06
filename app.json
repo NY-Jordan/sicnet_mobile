@@ -31,6 +31,22 @@
       "eas": {
         "projectId": "885f9158-a9a8-4d01-9785-82fb31f617a2"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow music_app to access your photos.",
+          "savePhotosPermission": "Allow music_app to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
   }
 }

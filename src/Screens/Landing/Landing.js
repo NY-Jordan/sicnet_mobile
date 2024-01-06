@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
-import {  Dimensions } from 'react-native'
+import {  Dimensions, useWindowDimensions } from 'react-native'
 import { styles } from './style'
-
-import { Box, HStack, Image, View,Link, ScrollView, Text, Button } from 'native-base'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { Box, HStack, Image, View,Link, ScrollView, Text, Button, useBreakpointValue } from 'native-base'
 import { Carousel } from 'react-native-basic-carousel'
 import { imageSliderLandingPage } from '../../data/landing'
+import { scale, verticalScale } from 'react-native-size-matters'
 
 
 export default function Landing({navigation}) {
   const SCREEN_WIDTH = Dimensions.get('window').width ;
+  const {width, height} = useWindowDimensions();
+  const isMd = height < 400 ? true  : false;
   return (
         <ScrollView style={styles.container}>
             <HStack justifyContent={'space-between'}>
@@ -26,23 +29,22 @@ export default function Landing({navigation}) {
                   data={imageSliderLandingPage} 
                   renderItem={({item, index}) => <View  
                          style={styles.alignCenter} 
-                         width={'100%'} 
-                         height="300px"
-                         marginBottom={"8%"}
+                         width={"100%"}       
+                         height={isMd ? 200 : 500}                 
                          >
-                    <Image source={item} alt='img' width={"100%"} height={"100%"}/>
+                    <Image source={item} resizeMode="contain" alt='img' width={"100%"} height={"100%"}  />
                   </View>}
                   itemWidth={SCREEN_WIDTH}
                   onSnapItem={(item) => console.log(item)}
                   autoplay
                 />
             </View>
-            <Box style={styles.alignCenter} marginBottom={"5%"}>
-              <Text fontSize={'3xl'}  fontWeight={"bold"} marginBottom={"5%"} textAlign={"center"}>Best Social App To Make New Freinds</Text>
-              <Text fontSize={"md"}  color={"gray.500"}   textAlign={"center"}>With SicNet you will find friends with the same musical tastes</Text>
+            <Box style={styles.alignCenter} marginBottom={"2%"}>
+              <Text fontSize={hp('2%')}  fontWeight={"bold"} marginBottom={"5%"} textAlign={"center"}>Best Social App To Make New Freinds</Text>
+              <Text fontSize={"xs"}  color={"gray.500"}   textAlign={"center"}>With SicNet you will find friends with the same musical tastes</Text>
             </Box>
             <Box style={styles.alignCenter} >
-              <Button   style={styles.Largebutton} shadow={8} onPress={() => navigation.navigate('Authentification')}>Get Started</Button>
+              <Button  size={'md'} style={styles.Largebutton} shadow={8} onPress={() => navigation.navigate('Authentification')}>Get Started</Button>
             </Box>
         </ScrollView>
       )
