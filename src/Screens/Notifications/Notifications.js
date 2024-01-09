@@ -12,7 +12,7 @@ export default function Notifications() {
           <Box mx={4}>
             <Text fontSize={'2xl'} >Notifications</Text>
           </Box>
-          <VStack mx={4}>
+          <VStack mx={4} >
             
               <NotificationItem />
               <NotificationItem />

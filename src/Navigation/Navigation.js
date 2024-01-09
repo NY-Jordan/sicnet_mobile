@@ -16,6 +16,8 @@ import { enableScreens } from 'react-native-screens';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import Conversation from '../Screens/Message/Conversation';
 import AddPost from '../Screens/Posts/AddPost';
+import Index from '../Screens/Account/Index';
+import Tab from '../Screens/Tab';
 
 
 enableScreens();
@@ -27,7 +29,7 @@ export default class Navigation extends Component {
     return (
       <SafeAreaView style={{flex: 1}}>
         <NavigationContainer >
-            <Stack.Navigator initialRouteName='Home'>
+            <Stack.Navigator initialRouteName='Tab'>
                 <Stack.Screen name="Landing" component={Landing} options={{ headerShown : false }} />
                 {/* Authentification */}
                 <Stack.Screen name="Authentification" component={Auth} options={{ headerShown : false }} />
@@ -47,6 +49,11 @@ export default class Navigation extends Component {
                 <Stack.Screen name="Debate" component={Debate} options={{ headerShown : false }} />
                 {/* Debate screen */}
                 <Stack.Screen name="AddPost" component={AddPost} options={{ headerShown : false }} />
+
+                 {/* Account screen */}
+                <Stack.Screen name="Account" component={Index} options={{ headerShown : false }} />
+
+                <Stack.Screen name="Tab" component={Tab} options={{ headerShown : false }} />
 
             </Stack.Navigator>
         </NavigationContainer>

@@ -59,19 +59,19 @@ export default function CommentSheets(props) {
             <Pressable onPress={() => HandleMessage('😁')}>
               <Text fontSize={"xl"}>😁</Text>
             </Pressable>
-            <Pressable onPress={() => HandleMessage('😁')}>
+            <Pressable onPress={() => HandleMessage('🥰')}>
               <Text fontSize={"xl"}>🥰</Text>
             </Pressable>
-            <Pressable onPress={() => HandleMessage('😁')}>
+            <Pressable onPress={() => HandleMessage('😂')}>
               <Text fontSize={"xl"}>😂</Text>
             </Pressable>
-            <Pressable onPress={() => HandleMessage('😁')}>
+            <Pressable onPress={() => HandleMessage('😳')}>
               <Text fontSize={"xl"}>😳</Text>
             </Pressable>
-            <Pressable onPress={() => HandleMessage('😁')}>
+            <Pressable onPress={() => HandleMessage('😏')}>
               <Text fontSize={"xl"}>😏</Text>
             </Pressable>
-            <Pressable onPress={() => HandleMessage('😁')}>
+            <Pressable onPress={() => HandleMessage('😅')}>
               <Text fontSize={"xl"}>😅</Text>
             </Pressable>
          </HStack>

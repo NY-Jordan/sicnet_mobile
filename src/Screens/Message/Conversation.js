@@ -149,7 +149,7 @@ export default function Conversation() {
           }}
         
       </Pressable>
-    </HStack>
+       </HStack>
     </VStack>
     {/* message tools end */}
     

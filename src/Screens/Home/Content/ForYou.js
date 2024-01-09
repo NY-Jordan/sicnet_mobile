@@ -10,7 +10,7 @@ import CommentSheets from '../../../Components/Sheets/CommentSheets'
 export default function ForYou() {
   return (
     <View >
-        <ScrollView showsVerticalScrollIndicator={false} marginBottom={"80%"}>
+        <ScrollView showsVerticalScrollIndicator={false}   px={2}>
             {
                 posts.map((post, index) =>  <>
                 <PostItem  
@@ -21,8 +21,8 @@ export default function ForYou() {
                 StatsReactions={post.StatsReactions}
                 commentsId={"comments"+index}
                 />
-                <Divider my={2} />
-                <CommentSheets sheetId={"comments"+index} />
+                <Divider key={index} my={2} />
+                <CommentSheets  key={index} sheetId={"comments"+index} />
                 </>)
             }
         </ScrollView>

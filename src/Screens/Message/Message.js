@@ -7,7 +7,7 @@ export default function Message() {
   return (
     <View  backgroundColor={'white'}>
         <Header />
-        <ScrollView>
+        <ScrollView height={"100%"}>
             <Box mx={4} mb={2}>
                 <Text fontSize={'2xl'} >Messages</Text>
                 
@@ -15,12 +15,7 @@ export default function Message() {
             <VStack>
                     <ConversationItem />
                     <ConversationItem />
-                    <ConversationItem />
-                    <ConversationItem />
-                    <ConversationItem />
-                    <ConversationItem />
-                    <ConversationItem />
-                    <ConversationItem />
+                    
             </VStack>            
         </ScrollView>
     </View>
