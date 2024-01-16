@@ -21,7 +21,7 @@ export default function VideoMedia({uri}) {
                 paused={false}  
                 repeat={false}    
                 useNativeControls
-                resizeMode={ResizeMode.CONTAIN}
+               
                 
                 source={{
                     uri: uri,

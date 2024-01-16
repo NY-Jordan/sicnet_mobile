@@ -10,7 +10,7 @@ import ImageMedia from '../../Components/Media/ImageMedia';
 
 export default function  AddPost()  {
     const navigation = useNavigation();
-    const albumName = "Caméra";
+    const albumName = "Instagram";
     const [photos, setPhotos] = useState();
     const [selectedMedia,setSelectedMedia] = useState();
     const getPhoto = async ()  =>   {

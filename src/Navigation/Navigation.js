@@ -18,6 +18,7 @@ import Conversation from '../Screens/Message/Conversation';
 import AddPost from '../Screens/Posts/AddPost';
 import Index from '../Screens/Account/Index';
 import Tab from '../Screens/Tab';
+import ChainDetails from '../Screens/Chain/ChainDetails';
 
 
 enableScreens();
@@ -54,6 +55,7 @@ export default class Navigation extends Component {
                 <Stack.Screen name="Account" component={Index} options={{ headerShown : false }} />
 
                 <Stack.Screen name="Tab" component={Tab} options={{ headerShown : false }} />
+                <Stack.Screen name="chainDetails" component={ChainDetails} options={{ headerShown : false }} />
 
             </Stack.Navigator>
         </NavigationContainer>

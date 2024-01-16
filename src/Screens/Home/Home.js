@@ -9,6 +9,9 @@ import { SheetProvider } from "react-native-actions-sheet";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Message from '../Message/Message'
 import ChainGroup from '../../Components/ChainGroup'
+import * as Progress from 'react-native-progress';
+
+
 
 export default function Home() {
     const navigation = useNavigation();
