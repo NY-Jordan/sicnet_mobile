@@ -10,12 +10,10 @@ export default function Message() {
         <ScrollView height={"100%"}>
             <Box mx={4} mb={2}>
                 <Text fontSize={'2xl'} >Messages</Text>
-                
             </Box>
             <VStack>
                     <ConversationItem />
                     <ConversationItem />
-                    
             </VStack>            
         </ScrollView>
     </View>

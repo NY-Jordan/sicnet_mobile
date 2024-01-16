@@ -155,7 +155,6 @@ export default function Conversation() {
     
     <EmojiPicker onEmojiSelected={(e) => HandleMessage(e.emoji)} open={EmojisTabIsOpen} onClose={() => setEmojisTabIsOpen(false)} />
        {/* <EmojiBoard showBoard={show} onClick={() => console.log("dd")} />  */}
-
     </>
   )
 }

@@ -7,24 +7,22 @@ import NotificationItem from '../../Components/NotificationItem'
 export default function Notifications() {
   return (
     <View >
-        <Header />
-        <ScrollView  >
-          <Box mx={4}>
-            <Text fontSize={'2xl'} >Notifications</Text>
-          </Box>
-          <VStack mx={4} >
-            
-              <NotificationItem />
-              <NotificationItem />
-              <NotificationItem />
-              <NotificationItem />
-              <NotificationItem />
-              <NotificationItem />
-              <NotificationItem />
-              <NotificationItem />
-            
-          </VStack>
-        </ScrollView>
+      <Header />
+      <ScrollView  >
+        <Box mx={4}>
+          <Text fontSize={'2xl'} >Notifications</Text>
+        </Box>
+        <VStack mx={4} >      
+            <NotificationItem />
+            <NotificationItem />
+            <NotificationItem />
+            <NotificationItem />
+            <NotificationItem />
+            <NotificationItem />
+            <NotificationItem />
+            <NotificationItem />   
+        </VStack>
+      </ScrollView>
     </View>
   )
 }
