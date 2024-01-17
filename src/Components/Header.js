@@ -19,7 +19,7 @@ export default function Header() {
                 NY
             </Avatar> 
         </Pressable>
-        <Link onPress={() => console.log('skip')} mt="3">
+        <Link onPress={() => navigation.navigate('Search')} mt="3">
           <HStack bg={'blueGray.200'} px={2} width={'85%'} space={4} alignItems={'center'}>
               <Image  source={searchIcon} alt='search icon' width={4} height={8} />
               <Text color={'gray.600'}>Search</Text>

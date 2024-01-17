@@ -23,7 +23,7 @@ export default function ChainDetails() {
                     <Text fontSize={'xl'}>Kamix</Text>
                     <HStack space={4} ml={4}>
                         <Text fontSize={'md'}   fontWeight={'bold'}> 10 Membres</Text>
-                        <Pressable> 
+                        <Pressable onPress={() => navigation.navigate('chainSearchUser')} > 
                             <Icon as={MaterialCommunityIcons} size={'lg'}  name='account-plus-outline' />
                         </Pressable>
                     </HStack>
@@ -41,14 +41,19 @@ export default function ChainDetails() {
                 </Pressable>
                 
         </HStack>
-        <Box mb={2} p={1} bgColor={'gray.200'}>
-
-        </Box>
+        <Box mb={2} p={1} bgColor={'gray.200'}> </Box>
         <ScrollView  >
             <Box display={'flex'} mx={2}  mb={2} flexDirection={'row'} justifyContent={'space-between'}>
                 <Text>10 Members</Text>
-                <Pressable>
-                    <Icon as={MaterialCommunityIcons} size={'lg'} name='account-search-outline'/>
+                <Pressable onPress={() => navigation.navigate('chainSearchUser')} >
+                {({
+                        isHovered,
+                        isPressed
+                    }) => {
+                        return   <HStack bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}  >
+                                        <Icon as={MaterialCommunityIcons} size={'lg'} name='account-search-outline'/>
+                                </HStack>
+                    }}
                 </Pressable>
             </Box>
             <MemberItem  isAdmin={true} />
