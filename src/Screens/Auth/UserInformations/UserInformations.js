@@ -29,7 +29,7 @@ export default function UserInformations() {
 const  userInformationHandle = () => {
   setLoading(true);
     setTimeout(() => {
-      navigation.navigate('FavoriteMusic')
+      navigation.navigate('Tab')
       setLoading(false);
     }, 2000);
 }

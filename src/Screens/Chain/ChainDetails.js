@@ -41,7 +41,7 @@ export default function ChainDetails() {
                 </Pressable>
                 
         </HStack>
-        <Box mb={2} p={1} bgColor={'gray.200'}> </Box>
+        <Box mb={2} p={1} bgColor={'gray.200'}></Box>
         <ScrollView  >
             <Box display={'flex'} mx={2}  mb={2} flexDirection={'row'} justifyContent={'space-between'}>
                 <Text>10 Members</Text>

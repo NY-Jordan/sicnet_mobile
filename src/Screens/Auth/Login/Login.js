@@ -52,7 +52,7 @@ export default function Login() {
             </Stack>
         </FormControl>
         <Box style={styles.alignCenter}  >
-              <Button   style={styles.Largebutton} shadow={8} onPress={() => navigation.navigate('Home')}>Log In</Button>
+              <Button   style={styles.Largebutton} shadow={8} onPress={() => navigation.navigate('Tab')}>Log In</Button>
         </Box>
         <HStack marginTop={'5%'}>
           <Divider  width={"45%"} bgColor={"gray.200"} marginTop={'12px'}></Divider>

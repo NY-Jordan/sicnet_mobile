@@ -40,7 +40,6 @@ export default function Search() {
         <Divider />
         <ScrollView bg={'gray.100'}>
             <MemberSearch />
-            
             <MemberSearch />
             <MemberSearch />
             <MemberSearch />
