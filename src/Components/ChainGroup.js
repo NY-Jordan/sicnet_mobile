@@ -10,7 +10,7 @@ export default function ChainGroup() {
 
 
   return (
-    <View>
+    <View _dark={{ bg : "cyan.900" }} p={2}>
         <FlatList  showsHorizontalScrollIndicator={false}  horizontal={true} data={chains} renderItem={({
       item
       }) => 

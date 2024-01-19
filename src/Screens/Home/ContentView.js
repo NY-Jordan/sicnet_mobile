@@ -30,7 +30,7 @@ export default function ContentView() {
 
     const renderTabBar = props => {
         const inputRange = props.navigationState.routes.map((x, i) => i);
-        return <Box flexDirection="row" px={2}>
+        return <Box flexDirection="row" px={2}  _dark={{ bg : "cyan.900" }}  >
 
             {props.navigationState.routes.map((route, i) => {
                 const opacity = props.position.interpolate({
@@ -39,12 +39,12 @@ export default function ContentView() {
                 });
                 const color = index === i ? useColorModeValue('#000', '#e5e5e5') : useColorModeValue('#1f2937', '#a1a1aa');
                 const borderColor = index === i ? 'cyan.500' : useColorModeValue('coolGray.200', 'gray.400');
-                return <Box key={i} borderBottomWidth="3" borderColor={borderColor} flex={1} alignItems="center" p="3" cursor="pointer">
-                            <Pressable onPress={() => {
+                return <Box    key={i} borderBottomWidth="3" borderColor={borderColor} flex={1} alignItems="center" p="3" cursor="pointer">
+                            <Pressable  onPress={() => {
                                 console.log(i);
                                 setIndex(i);
                             }}>
-                                <Animated.Text style={{color}}>{route.title}</Animated.Text>
+                                <Animated.Text    style={{color}}>{route.title}</Animated.Text>
                             </Pressable>
                     </Box>;
             })

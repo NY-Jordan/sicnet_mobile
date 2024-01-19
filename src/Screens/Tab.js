@@ -5,24 +5,29 @@ import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import Home from './Home/Home';
 import Message from './Message/Message';
 import Notifications from './Notifications/Notifications';
-import { Box } from 'native-base';
+import { Box, useColorModeValue } from 'native-base';
 import * as NavigationBar from 'expo-navigation-bar';
 
 
 export default function Tab() {
-    NavigationBar.setBackgroundColorAsync("white");
-
+    
+    const color = useColorModeValue("white", "#164e63");
+    const colorIcon = useColorModeValue("white", "white");
+    NavigationBar.setBackgroundColorAsync(color);
     const Tab = createBottomTabNavigator();
   return (
     
-    <Tab.Navigator initialRouteName='Home'  screenOptions={{ 
+    <Tab.Navigator initialRouteName='Home'   screenOptions={{ 
         headerShown : false,
-        tabBarShowLabel : false
+        tabBarShowLabel : false,
+        tabBarStyle : {
+          backgroundColor : color
+        }
      }} >
-            <Tab.Screen name="Home" component={Home} options={{ 
+            <Tab.Screen name="Home"  component={Home} options={{ 
                 tabBarIcon: ({ color, size }) => (
-                    <Box>
-                        <MaterialCommunityIcons name="home" color={color} size={size} />
+                    <Box >
+                        <MaterialCommunityIcons name="home" color={colorIcon} size={size} />
                         <Box backgroundColor={'red.600'}  padding={1} minWidth={5}  position={'absolute'} left={4} bottom={2} borderRadius={40} >
                             <Text style={{ color : "white", textAlign : "center", fontSize  : 10}}>{'+4'}</Text>
                         </Box>
@@ -32,7 +37,7 @@ export default function Tab() {
              <Tab.Screen name="Notifications" component={Notifications} options={{ 
                 tabBarIcon: ({ color, size }) => (
                     <Box>
-                        <MaterialCommunityIcons name="bell-outline" color={color} size={size} />
+                        <MaterialCommunityIcons name="bell-outline" color={colorIcon} size={size} />
                         <Box backgroundColor={'red.600'}  padding={1} minWidth={5}  position={'absolute'} left={4} bottom={2} borderRadius={40} >
                             <Text style={{ color : "white", textAlign : "center", fontSize  : 10}}>{'+10'}</Text>
                         </Box>
@@ -45,7 +50,7 @@ export default function Tab() {
               <Tab.Screen name="Message" component={Message} options={{ 
                 tabBarIcon: ({ color, size }) => (
                     <Box>
-                        <MaterialCommunityIcons name="message-outline" color={color} size={size} />
+                        <MaterialCommunityIcons name="message-outline" color={colorIcon} size={size} />
                         <Box backgroundColor={'red.600'}  padding={1} minWidth={5}  position={'absolute'} left={4} bottom={2} borderRadius={40} >
                             <Text style={{ color : "white", textAlign : "center", fontSize  : 10}}>{'+1'}</Text>
                         </Box>

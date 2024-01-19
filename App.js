@@ -5,6 +5,7 @@ import Navigation from './src/Navigation/Navigation';
 import { NativeBaseProvider, extendTheme } from 'native-base';
 import { enableScreens, useScreens } from 'react-native-screens';
 import { SheetProvider } from 'react-native-actions-sheet';
+import { ThemeProvider } from './src/Context/ThemeContext';
 
 export default function App() {
   
@@ -13,7 +14,9 @@ export default function App() {
   return (
     <SheetProvider>
       <NativeBaseProvider >
-          <Navigation />
+          <ThemeProvider>
+            <Navigation />
+          </ThemeProvider>
       </NativeBaseProvider>
    </SheetProvider>
   );

@@ -10,7 +10,8 @@ import { useNavigation } from '@react-navigation/native';
 export default function Header() {
   const navigation = useNavigation();
   return (
-    <Box>
+    <>
+    <Box _dark={{ bg: "cyan.900"}}>
       <HStack  space={4} alignItems={'center'}  mx={2} my={2}>
         <Pressable mt={4} onPress={() => navigation.navigate('Account')}>
             <Avatar bg="green.500" size="sm" source={{
@@ -20,13 +21,15 @@ export default function Header() {
             </Avatar> 
         </Pressable>
         <Link onPress={() => navigation.navigate('Search')} mt="3">
-          <HStack bg={'blueGray.200'} px={2} width={'85%'} space={4} alignItems={'center'}>
+          <HStack bg={'blueGray.200'} _dark={{ bg: "gray.400"}} px={2} width={'85%'} space={4} alignItems={'center'}>
               <Image  source={searchIcon} alt='search icon' width={4} height={8} />
-              <Text color={'gray.600'}>Search</Text>
+              <Text _dark={{ color: "white"}} color={'gray.600'}>Search</Text>
           </HStack>
         </Link>
       </HStack>
-      <Box mb={2} p={1} bgColor={'gray.200'}></Box> 
+      
     </Box>
+    <Box _dark={{ bg: "coolGray.800"}}  p={1} _light={{ bg: "gray.200" }} ></Box> 
+  </>
   );
 }

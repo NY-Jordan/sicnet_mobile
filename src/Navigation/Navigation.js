@@ -32,7 +32,7 @@ export default class Navigation extends Component {
     return (
       <SafeAreaView style={{flex: 1}}>
         <NavigationContainer >
-            <Stack.Navigator initialRouteName='Landing'>
+            <Stack.Navigator initialRouteName='Tab'>
                 <Stack.Screen name="Landing" component={Landing} options={{ headerShown : false }} />
                 {/* Authentification */}
                 <Stack.Screen name="Authentification" component={Auth} options={{ headerShown : false }} />

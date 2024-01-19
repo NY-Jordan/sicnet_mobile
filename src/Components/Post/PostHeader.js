@@ -4,8 +4,8 @@ import { Avatar, Box, Text ,HStack, Pressable, ThreeDotsIcon, CloseIcon } from '
 
 export default function PostHeader() {
   return (
-    <HStack justifyContent={'space-between'}>
-        <HStack space={8}>
+    <HStack justifyContent={'space-between'} p={2} _dark={{ bg : "coolGray.800" }}>
+        <HStack space={8}> 
             <Pressable width={'15%'}>
                     <Avatar bg="green.500" size="md" source={{
                     uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fH&auto=format&fit=crop&w=687&q=80"
