@@ -48,8 +48,8 @@ export default function  AddPost()  {
     };
    
     return (
-    <View backgroundColor={'white'}  height={'100%'}  paddingTop={10}   paddingRight={2}>
-      <Box  px={4} marginBottom={"15%"} justifyContent={'space-between'}   flexDirection={"row"}>
+    <View  _dark={{ bg : "muted.900" }} _light={{ bg : "white" }} height={'100%'}  paddingTop={10}   paddingRight={2}>
+      <Box  px={4} _dark={{ bg : "muted.900" }}  marginBottom={"15%"} justifyContent={'space-between'}   flexDirection={"row"}>
       <Pressable  onPress={() => navigation.goBack()}>
           {({
                 isHovered,
@@ -65,22 +65,22 @@ export default function  AddPost()  {
             <Button borderRadius={30}>All</Button>
         </HStack>
       </Box>
-      <HStack space={2}  px={4} >
+      <HStack space={2}  _dark={{ bg : "muted.900" }}   px={4} >
             <Pressable >
                     <Avatar bg="green.500" size="md">
                         NY
                     </Avatar> 
             </Pressable>
-            <TextArea h={20}  overflowY={'hidden'}  borderColor={'white'} _focus={{ backgroundColor :'white', borderColor : 'white' }} color={'black'} fontSize={'xl'} placeholder="Quoi de neuf ?" w="80%"  />
+            <TextArea h={20} _dark={{ bg : "muted.900", color : "white",  }} _focus={{ bg : "muted.900"}} overflowY={'hidden'}  borderColor={'white'} _focus={{ backgroundColor :'white', borderColor : 'white' }} color={'black'} fontSize={'xl'} placeholder="Quoi de neuf ?" w="80%"  />
       </HStack>
 
       {/* Media uploaded */}
       {
-          selectedMedia ? ( selectedMedia.mediaType === "video"  ||  selectedMedia.type === "video" ) ? <VideoMedia uri={selectedMedia.uri}  /> : <ImageMedia uri={selectedMedia.uri}  />  : <></>
+          selectedMedia ? ( selectedMedia.mediaType === "video"  ||  selectedMedia.type === "video" ) ? <VideoMedia uri={selectedMedia.uri}  /> : <ImageMedia uri={selectedMedia.uri}  />  : <Box _dark={{ bg : "muted.900" }} ></Box>
           
       }
             
-      <ScrollView  horizontal={true} position={'absolute'} width={"100%"} left={4} right={4}  top={"80%"}>
+      <ScrollView   _dark={{ bg : "muted.900" }}  horizontal={true} position={'absolute'} width={"100%"} left={4} right={4}  top={"80%"}>
           <Pressable   onPress={() => loadMediaInGallery()} borderColor={'blue.200'}>
               <Box  borderColor={'gray.200'} alignItems={'center'} justifyContent={'center'} borderRadius={20}  borderWidth="1" style={{ width : 80, height : 80 }}  >
                 <Icon as={MaterialCommunityIcons} size="8" name="camera" color="blue.200" _dark={{
