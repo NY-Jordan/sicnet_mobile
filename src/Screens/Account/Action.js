@@ -22,7 +22,7 @@ export default function Action({isOpen, onOpen, onClose}) {
   return (
    
   <Center>
-    <Actionsheet   isOpen={isOpen} onClose={onClose} >
+    <Actionsheet _dark={{ color : "white" }}  isOpen={isOpen} onClose={onClose} >
       <Actionsheet.Content borderTopRadius="0" >
         <Box w="100%" h={60} px={4} justifyContent="center">
           <Text fontSize="16" color="gray.500" _dark={{

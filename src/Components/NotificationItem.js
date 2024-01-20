@@ -3,13 +3,13 @@ import React from 'react'
 
 export default function NotificationItem() {
   return (
-    <Box >
+    <Box _dark={{ bg  : "muted.900"}}>
             <Pressable >
               {({
                     isHovered,
                     isPressed
                   }) => {
-                    return <HStack space={2} my={6} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "coolGray.100"}> 
+                    return <HStack space={2} my={6} _dark={{ bg : "muted.900" }} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "coolGray.100"}> 
                               <Pressable width={'15%'}>
                                     <Avatar bg="green.500" size="md" source={{
                                         uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",

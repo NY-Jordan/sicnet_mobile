@@ -31,13 +31,13 @@ export default function Conversation() {
   }
   return (
     <>
-    <Box backgroundColor={'white'}>
+    <Box backgroundColor={'white'} _dark={{ bg  : "muted.900"}}>
       {/* start header chat */}
     <ConversationHeader />
     <Divider />
     {/* end header chat */}
     </Box>
-    <ScrollView backgroundColor={'white'} contentContainerStyle={{flexGrow: 1}} marginBottom={"14%"}>
+    <ScrollView  _dark={{ bg  : "muted.900"}} _light={{ bg : "white" }} contentContainerStyle={{flexGrow: 1}} marginBottom={"14%"}>
         <VStack >
           {/* Profil presentation start */}
           <Box display={'flex'} alignItems={'center'} justifyContent={'center'} mt={10}>
@@ -114,11 +114,11 @@ export default function Conversation() {
 
 
     {/* message tools start */}
-    <VStack position={'absolute'} marginBottom={'100%'}   backgroundColor={'white'}  alignItems={'center'} width={'100%'} py={2} justifyContent={'center'}  top={"90%"}>
+    <VStack position={'absolute'} _dark={{ bg  : "cyan.900"}} _light={{ bg  : "white"}}   marginBottom={'100%'}     alignItems={'center'} width={'100%'} py={2} justifyContent={'center'}  top={"90%"}>
       <Divider />
       <HStack mt={2} space={2} alignItems={'center'} >
         <HStack alignItems="center">
-          <IconButton variant="solid"  borderRadius="full" size="lg" onPress={onToggle} bg="white" icon={<Icon as={MaterialCommunityIcons} size="6" name="dots-horizontal" color="black" _dark={{
+          <IconButton variant="solid"  borderRadius="full" size="lg" onPress={onToggle} bg="white" _dark={{ bg : 'cyan.900' }} icon={<Icon as={MaterialCommunityIcons} size="6" name="dots-horizontal" color="black" _dark={{
           color: "warmGray.50"
         }}   />} _hover={{
                     bg: "blueGray.300"
@@ -132,18 +132,18 @@ export default function Conversation() {
             isHovered,
             isPressed
         }) => {
-          return <Box p={1} borderRadius={20}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+          return <Box p={1} borderRadius={20} _dark={{ bg : isPressed ? "cyan.800" : isHovered ? "cyan.800" : "cyan.900", color : "white" }}  bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
             <FontAwesomeIcon  size={25} icon={faFaceSmileBeam} />
           </Box>
           }}           
       </Pressable>
-      <Input size={'md'} value={MessageValue} onChangeText={text => setMessageValue(text)}  backgroundColor={'gray.100'}  borderRadius={30} width={'60%'}  />
+      <Input size={'md'} value={MessageValue} _dark={{ bg: "gray.400"}} _focus={{ bg : "gray.400" }} _light={{ bg : "gray.100" }} onChangeText={text => setMessageValue(text)}    borderRadius={30} width={'60%'}  />
       <Pressable onPress={HandleMessageSent}  >
             {({
             isHovered,
             isPressed
         }) => {
-          return <Box p={2} borderRadius={20}    bg={isPressed ? "blueGray.300" : isHovered ? "blueGray.300" : "white"}>
+          return <Box _dark={{ bg : isPressed ? "cyan.800" : isHovered ? "cyan.800" : "cyan.900" }} p={2} borderRadius={20}   >
             < FontAwesomeIcon  size={25} icon={faPaperPlane} />
           </Box>
           }}

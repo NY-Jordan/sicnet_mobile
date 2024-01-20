@@ -9,8 +9,8 @@ export default function LinkChain({onPress, text}) {
                 isHovered,
                 isPressed
             }) => {
-                return  <Box py={2} pl={2}  bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
-                        {text}
+                return  <Box py={2} pl={2} _dark={{ color :"black" }}  bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+                        <Text _dark={{ color : "black" }}>{text}</Text>
                 </Box>
             }}
     </Pressable>

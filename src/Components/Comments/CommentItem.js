@@ -29,7 +29,7 @@ export default function CommentItem({username, message, created_at, like, respon
                         <Box flexDirection={'row'} >
                                 <Text color={'gray.400'}>{created_at}</Text>
                                 <Pressable ml={"15%"}>
-                                    <Text color={'gray.500'}>Repondre</Text>
+                                    <Text _dark={{ color : "white" }} color={'gray.500'}>Repondre</Text>
                                 </Pressable>
                         </Box>
                         <HStack alignItems={'center'} space={4}>
@@ -46,7 +46,7 @@ export default function CommentItem({username, message, created_at, like, respon
                     </HStack>
                     {
                         (response > 0 && showSubComments === false) ? <Pressable  onPress={() => setShowSubComments(true)} justifyContent={'center'} mt={"4%"}>
-                        <Text fontSize={'sm'} color={'gray.700'} >{"_____Voir " +response+ " reponses"}</Text>
+                        <Text fontSize={'sm'} _dark={{ color : "white" }} color={'gray.700'} >{"_____Voir " +response+ " reponses"}</Text>
                     </Pressable> : ""
                     }
                     {

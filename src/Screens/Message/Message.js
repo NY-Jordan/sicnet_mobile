@@ -5,9 +5,9 @@ import ConversationItem from '../../Components/ConversationItem'
 
 export default function Message() {
   return (
-    <View  backgroundColor={'white'}>
+    <View  backgroundColor={'white'} _dark={{ bg  : "muted.900"}}>
         <Header />
-        <ScrollView height={"100%"}>
+        <ScrollView height={"100%"} _dark={{ bg  : "muted.900"}}>
             <Box mx={4} mb={2}>
                 <Text fontSize={'2xl'} >Messages</Text>
             </Box>

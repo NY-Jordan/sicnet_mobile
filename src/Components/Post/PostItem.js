@@ -11,8 +11,8 @@ import { SheetManager } from 'react-native-actions-sheet'
 export default function PostItem({content, image, video, StatsReactions, commentsId}) {
    
   return (
-    <View marginTop={4} _dark={{ bg : "coolGray.800" }} >
-        <Box _dark={{ bg : "coolGray.800" }}>
+    <View marginTop={4} _dark={{ bg : "muted.900" }} >
+        <Box _dark={{ bg : "muted.900" }}>
             <PostHeader />
             <Box ml={12}  mr={2} >
                 <Text fontFamily={'Roboto'}>{content}</Text>

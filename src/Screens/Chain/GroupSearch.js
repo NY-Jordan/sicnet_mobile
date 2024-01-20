@@ -12,7 +12,7 @@ export default function GroupSearch({isAdmin = false}) {
         isHovered,
         isPressed
     }) => {
-        return   <HStack py={2} my={2} mx={4}  px={2} ml={2}  borderRadius={10} alignItems={"center"} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+        return   <HStack  _dark={{ bg : isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "muted.900" }} py={2}   my={2} mx={4}  px={2} ml={2}  borderRadius={10} alignItems={"center"} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                     <Avatar bg="green.500" size="lg"  source={{
                                 uri:  'https://www.emploi.cm/sites/emploi.cm/files/styles/medium/public/logo/img-20220204-wa0028.jpg?itok=im50Vh2Z'
                             }}>

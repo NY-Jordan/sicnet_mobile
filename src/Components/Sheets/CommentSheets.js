@@ -1,4 +1,4 @@
-import { Avatar, Box, CloseIcon, Divider, HStack, Input, KeyboardAvoidingView, Pressable, ScrollView, Text, View } from "native-base";
+import { Avatar, Box, CloseIcon, Divider, HStack, Input, KeyboardAvoidingView, Pressable, ScrollView, Text, View, useColorModeValue } from "native-base";
 import React, { useState } from "react";
 import ActionSheet, {
   SheetManager,
@@ -9,6 +9,7 @@ import CommentItem from "../Comments/CommentItem";
 import { comments } from "../../data/comments";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import * as NavigationBar from 'expo-navigation-bar';
 
 export default function CommentSheets(props) {
   const  [message, setMessage] = useState('');
@@ -16,9 +17,12 @@ export default function CommentSheets(props) {
     const value = message + val;
     setMessage(value);
   }
+  const bgColor = useColorModeValue("white", "#171717");
+  const color = useColorModeValue("white", "#164e63");
+  NavigationBar.setBackgroundColorAsync(color);
   return (
-    <ActionSheet id={props.sheetId} keyboardShouldPersistTaps={"always"} bounceOnOpen={true} bounciness={10} >
-      <View   maxHeight={"73%"}  >
+    <ActionSheet id={props.sheetId} bg={bgColor} keyboardShouldPersistTaps={"always"} bounceOnOpen={true} bounciness={10} >
+      <View   maxHeight={"73%"} _dark={{ bg : "muted.700" }} >
         <Box position={'relative'} left={'88%'} top={"3%"}>
           <Pressable  onPress={() => SheetManager.hide(props.sheetId)}>
           {({
@@ -32,14 +36,14 @@ export default function CommentSheets(props) {
             </Pressable>
         </Box>
         <Box alignItems={'center'}  mb={4}>
-           <Text color={'blueGray.800'} fontSize={'md'}><Text fontWeight={'bold'}>250</Text> Comments</Text>
+           <Text _light={{ color : "blueGray.800" }} dark={{ color : "white" }} fontSize={'md'}><Text _dark={{ color : "white" }} fontWeight={'bold'}>250 </Text  > Comments</Text>
         </Box>
         <Divider />
         
        {/*  <Input display={'absolute'} top={"5%"} zIndex={10}/> */}
         
       </View>
-      <ScrollView  p={2} minHeight={'40%'} maxHeight={"70%"}>
+      <ScrollView  p={2} minHeight={'40%'} maxHeight={"70%"} _dark={{ bg : "muted.900" }}>
           {
             comments.map((comment, index) => <CommentItem 
             key={index}
@@ -53,7 +57,7 @@ export default function CommentSheets(props) {
           }
           
       </ScrollView>
-      <KeyboardAvoidingView mb={4} >
+      <KeyboardAvoidingView mb={4} _dark={{ bg : "muted.900" }}>
         <Divider />
          <HStack  space={8} justifyContent={'center'} alignItems={'center'} mt={2} mb={4}>
             <Pressable onPress={() => HandleMessage('😁')}>

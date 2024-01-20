@@ -14,7 +14,7 @@ export default function Header() {
       const {theme, toggleTheme} = useContext(ThemeContext);
 
   return (
-    <HStack mb={2}  alignItems={'center'} space={20} >
+    <HStack mb={2} _dark={{ bg : "muted.900" }}  alignItems={'center'} space={20} >
                 <HStack space={4}>
                     <Pressable mt={2}  onPress={() => navigation.goBack()} ml={4} >
                         <ArrowBackIcon size='5'/>

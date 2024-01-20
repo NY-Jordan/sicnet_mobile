@@ -12,7 +12,7 @@ export default function MemberSearch({isAdmin = false}) {
         isHovered,
         isPressed
     }) => {
-        return   <HStack py={2} my={2} alignItems={"center"} mx={2} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+        return   <HStack  _dark={{ bg : isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "muted.900" }} py={2} my={2} alignItems={"center"} mx={2} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                 <Avatar bg="green.500" size="md"  source={{
                             uri: "https://images.bigbadtoystore.com/images/p/full/2022/09/dd4eac8d-15bd-49f4-bde5-c31ac7944d20.jpg"
                         }}>

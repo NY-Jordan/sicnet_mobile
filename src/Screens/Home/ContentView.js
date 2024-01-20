@@ -30,7 +30,7 @@ export default function ContentView() {
 
     const renderTabBar = props => {
         const inputRange = props.navigationState.routes.map((x, i) => i);
-        return <Box flexDirection="row" px={2}  _dark={{ bg : "cyan.900" }}  >
+        return <Box flexDirection="row" px={2}  _dark={{ bg : "muted.900" }}  >
 
             {props.navigationState.routes.map((route, i) => {
                 const opacity = props.position.interpolate({
@@ -62,7 +62,7 @@ export default function ContentView() {
             renderTabBar={renderTabBar} 
             onIndexChange={setIndex} 
             initialLayout={initialLayout}
-            style={{ marginTop: 10}} 
+             
         />
 
   </>

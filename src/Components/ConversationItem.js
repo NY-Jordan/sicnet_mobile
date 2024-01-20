@@ -10,13 +10,13 @@ export default function ConversationItem() {
         navigation.navigate('Conversation');
     }
   return (
-    <Box my={2}>
-        <Pressable mx={4} onPress={() => HandleNavigationChats()}>
+    <Box my={2} _dark={{ bg  : "muted.900"}}>
+        <Pressable _dark={{ bg  : "muted.900"}} mx={4} onPress={() => HandleNavigationChats()}>
             {({
                 isHovered,
                 isPressed
             }) => {
-        return <HStack space={20}  paddingTop={2} paddingBottom={2}  overflow={'hidden'} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+        return <HStack  _dark={{ bg  : isPressed ? "coolGray.500" : isHovered ? "coolGray.500" : "muted.900"}} space={20}  paddingTop={2} paddingBottom={2}  overflow={'hidden'} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                 <HStack>
                     <Box>
                         <Avatar bg="green.500" size="md" source={{
@@ -29,7 +29,7 @@ export default function ConversationItem() {
                     </Box>
                     <Box ml={4} >
                         <Text fontSize={'lg'} >Nguetse Yvan</Text>
-                        <Text  color={'gray.600'} fontSize={'md'} >salut c'est comment ? tu as ...</Text>
+                        <Text  color={'gray.600'} _dark={{ color  : "white"}} fontSize={'md'} >salut c'est comment ? tu as ...</Text>
 
                     </Box>
                 </HStack>

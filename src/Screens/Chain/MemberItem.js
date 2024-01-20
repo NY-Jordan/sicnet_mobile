@@ -6,12 +6,12 @@ import LinkChain from '../../Components/LinkChain';
 export default function MemberItem({isAdmin = false}) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
-    <Pressable onPress={() => setModalIsOpen(!modalIsOpen) }>
+    <Pressable  onPress={() => setModalIsOpen(!modalIsOpen) }>
     {({
         isHovered,
         isPressed
     }) => {
-        return   <HStack py={2} my={2} alignItems={"center"} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+        return   <HStack  _dark={{ bg : isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "muted.900"}} py={2} my={2} alignItems={"center"} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                 <Avatar bg="green.500" size="md"  source={{
                             uri: "https://i0.wp.com/www.theiststore.com/wp-content/uploads/2023/03/gojo-toon.png?fit=1125%2C1125&ssl=1"
                         }}>

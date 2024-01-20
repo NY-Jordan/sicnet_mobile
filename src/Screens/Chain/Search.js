@@ -8,28 +8,28 @@ import searchIcon from './../../assets/img/searchIcon.png';
 export default function Search() {
     const navigation  = useNavigation();
   return (
-    <View bg={'white'} height={"100%"}>
-       <HStack mb={4}  mt={4} alignItems={'center'}  space={4} >
+    <View bg={'white'} _dark={{ bg : "muted.900" }} height={"100%"}>
+       <HStack mb={4} _dark={{ bg : "muted.900" }} mt={4} alignItems={'center'}  space={4} >
        <        Pressable mt={2}  onPress={() => navigation.goBack()}  >
                     {({
                         isHovered,
                         isPressed
                     }) => {
-                        return <Box   p={2} borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
-                                 <ArrowBackIcon size='5'/>
+                        return <Box  _dark={{ bg : isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "cyan.900" }}  p={2} borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+                                 <ArrowBackIcon   _dark={{ color : "white" }} size='5'/>
                             </Box>
                         }}
                    
                 </Pressable>
                 <Box  alignItems={'center'} width={'70%'} justifyContent={'center'} > 
-                    <Input backgroundColor={'gray.100'}   borderRadius={30} />
+                    <Input backgroundColor={'gray.100'} _dark={{ bg : "gray.700" }}   borderRadius={30} />
                 </Box>
                 <Pressable   >
                     {({
                         isHovered,
                         isPressed
                     }) => {
-                        return <Box  overflow={'hidden'} p={2} borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+                        return <Box _dark={{ bg : isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "cyan.900" }}   overflow={'hidden'}  borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                                  <Image  source={searchIcon} alt='search icon' width={8} height={10} />
                             </Box>
                         }}
@@ -38,7 +38,7 @@ export default function Search() {
                 
         </HStack>
         <Divider />
-        <ScrollView bg={'gray.100'}>
+        <ScrollView _dark={{ bg : "muted.900" }} bg={'gray.100'}>
             <MemberSearch />
             <MemberSearch />
             <MemberSearch />

@@ -9,8 +9,8 @@ import CommentSheets from '../../../Components/Sheets/CommentSheets'
 
 export default function ForYou() {
   return (
-    <View _dark={{ bg : "coolGray.800" }}>
-        <ScrollView showsVerticalScrollIndicator={false} _dark={{ bg : "coolGray.800" }}  px={2}>
+    <View _dark={{ bg : "muted.900" }}>
+        <ScrollView showsVerticalScrollIndicator={false} _dark={{ bg : "muted.900" }}  px={2}>
             {
                 posts.map((post, index) =>  <>
                 <PostItem  

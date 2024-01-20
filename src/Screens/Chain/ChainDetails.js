@@ -7,8 +7,8 @@ import MemberItem from './MemberItem';
 export default function ChainDetails() {
     const navigation  = useNavigation();
   return (
-    <View bg={'white'} height={'100%'}>
-      <HStack mb={2} justifyContent={'center'}  bg={'white'}>
+    <View bg={'white'} _dark={{ bg: "muted.900"}} height={'100%'}>
+      <HStack mb={2} _dark={{ bg: "muted.900"}} justifyContent={'center'}  bg={'white'}>
                 
                 <Pressable mt={2} width={"25%"}  onPress={() => navigation.goBack()} ml={4} >
                     <ArrowBackIcon size='5'/>
@@ -33,7 +33,7 @@ export default function ChainDetails() {
                         isHovered,
                         isPressed
                     }) => {
-                        return <Box  overflow={'hidden'} p={2}  alignItems={'center'}  borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+                        return <Box  _dark={{ bg : isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "muted.900" }} p={2} overflow={'hidden'}   alignItems={'center'}  borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                                 <ThreeDotsIcon />
                             </Box>
                         }}
@@ -41,16 +41,16 @@ export default function ChainDetails() {
                 </Pressable>
                 
         </HStack>
-        <Box mb={2} p={1} bgColor={'gray.200'}></Box>
+        <Box mb={2} p={1} _dark={{ bg: "black"}} _light={{ bg : "gray.200" }}></Box>
         <ScrollView  >
-            <Box display={'flex'} mx={2}  mb={2} flexDirection={'row'} justifyContent={'space-between'}>
+            <Box display={'flex'}  mx={2}  mb={2} flexDirection={'row'} justifyContent={'space-between'}>
                 <Text>10 Members</Text>
                 <Pressable onPress={() => navigation.navigate('chainSearchUser')} >
                 {({
                         isHovered,
                         isPressed
                     }) => {
-                        return   <HStack bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}  >
+                        return   <HStack _dark={{bg : isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "muted.900"}} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}  >
                                         <Icon as={MaterialCommunityIcons} size={'lg'} name='account-search-outline'/>
                                 </HStack>
                     }}
@@ -65,7 +65,7 @@ export default function ChainDetails() {
             <MemberItem />
             <MemberItem />
             <MemberItem />
-            <Box mb={2} p={1} bgColor={'gray.200'}>
+            <Box mb={2} p={1} _dark={{ bg: "black"}} _light={{ bg : "gray.200" }}>
 
             </Box>
             <VStack py={6}  space={6}>
@@ -75,7 +75,7 @@ export default function ChainDetails() {
                         isHovered,
                         isPressed
                     }) => {
-                        return   <HStack bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}  px={2} space={4} alignItems={'enter'}>
+                        return   <HStack _dark={{  bg :isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "muted.900" }} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}  px={2} space={4} alignItems={'enter'}>
                                     <Icon size={'xl'}  color={'red.500'} as={MaterialCommunityIcons} name='logout'  />
                                     <Text color={'red.500'} fontSize={'lg'}>Quitter la Chaine</Text>
                                 </HStack>
@@ -86,7 +86,7 @@ export default function ChainDetails() {
                         isHovered,
                         isPressed
                     }) => {
-                        return   <HStack bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}  px={2} space={4} alignItems={'enter'} >
+                        return   <HStack _dark={{  bg :isPressed ? "coolGray.700" : isHovered ? "coolGray.700" : "muted.900" }} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}  px={2} space={4} alignItems={'enter'} >
                                     <Icon size={'xl'}  color={'red.500'} as={MaterialCommunityIcons} name='thumb-down-outline'  />
                                     <Text color={'red.500'} fontSize={'lg'}>Signaler la Chaine</Text>
                                 </HStack>

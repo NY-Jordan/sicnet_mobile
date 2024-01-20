@@ -13,7 +13,7 @@ import ChainGroup from '../../Components/ChainGroup';
 export default function Index() {
     const navigation = useNavigation();
   return (
-    <View bgColor={'white'} height={"100%"} p={2}>
+    <View bgColor={'white'} _dark={{ bg : "muted.900" }} height={"100%"} p={2}>
       <Box>
         <Header />
         <Divider />
@@ -43,7 +43,7 @@ export default function Index() {
         </HStack>
         {/* Bio */}
         <Box mt={2}>
-            <Text color={'blueGray.600'}>Plus tu seras honnête , plus on dira que tu simules</Text>
+            <Text _dark={{ color : "white" }}  color={'blueGray.600'}>Plus tu seras honnête , plus on dira que tu simules</Text>
         </Box>
 
         <HStack justifyContent={'center'} space={2} mt={4}>
@@ -52,8 +52,8 @@ export default function Index() {
                         isHovered,
                         isPressed
                     }) => {
-                        return <Box borderWidth={1} borderColor={'gray.400'}   px={4} py={2} borderRadius={30} flexDirection={"row"} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
-                            <Text fontWeight={'bold'} mr={2}>Nouveau post</Text>
+                        return <Box borderWidth={1}  _dark={{ bg : "gray.900" }} borderColor={'gray.400'}   px={4} py={2} borderRadius={30} flexDirection={"row"} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+                            <Text fontWeight={'bold'}  mr={2}>Nouveau post</Text>
                             <Icon as={MaterialCommunityIcons} size="5"  color={'gray.500'} name="plus" />
                         </Box>
                     }}
@@ -64,7 +64,7 @@ export default function Index() {
                         isHovered,
                         isPressed
                     }) => {
-                        return <Box borderWidth={1}  flexDirection={"row"} borderColor={'gray.400'} px={4} py={2} borderRadius={30} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+                        return <Box borderWidth={1} _dark={{ bg : "gray.900" }}  flexDirection={"row"} borderColor={'gray.400'} px={4} py={2} borderRadius={30} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                                 <Text fontWeight={'bold'} mr={2}>Modifier le profil</Text>
                                 <Icon as={MaterialCommunityIcons} size="5"  color={'gray.500'} name="pencil-outline" />
                         </Box>

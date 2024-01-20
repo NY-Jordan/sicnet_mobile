@@ -11,15 +11,14 @@ export default function ConversationHeader() {
   } = useDisclose();
   return (
     <HStack space={4}>
-    <Pressable ml={4} onPress={() => navigation.goBack()}>
+    <Pressable ml={4}    onPress={() => navigation.goBack()}>
       {({
           isHovered,
           isPressed
       }) => {
-        return <HStack   space={2} my={2} py={2}  overflow={'hidden'} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
-
+        return <HStack  _dark={{ bg  : "muted.900"}} space={2} my={2} py={2}  overflow={'hidden'} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                     <Box mt={2}>
-                      <ArrowBackIcon color='black' size='5'/>
+                      <ArrowBackIcon _dark={{ color  : "white"}} color='black' size='5'/>
                     </Box>
                     <Box>
                         <Avatar bg="green.500" size="sm" source={{
@@ -38,7 +37,7 @@ export default function ConversationHeader() {
           isHovered,
           isPressed
       }) => {
-        return <Box  overflow={'hidden'}  my={2} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+        return <Box  _dark={{ bg  : "muted.900"}}  overflow={'hidden'}  my={2} bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                    <Text   fontSize={'lg'}>Nguetse Yvan Jordan</Text>
                    <Text color={'tertiary.600'}  fontSize={'xs'}>Online</Text> 
             </Box>
@@ -49,7 +48,7 @@ export default function ConversationHeader() {
           isHovered,
           isPressed
       }) => {
-        return <Box  overflow={'hidden'} p={2} borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
+        return <Box _dark={{ bg  : isPressed ? "coolGray.500" : isHovered ? "coolGray.500" : "muted.900"}}  overflow={'hidden'} p={2} borderRadius={30}   bg={isPressed ? "coolGray.200" : isHovered ? "coolGray.200" : "white"}>
                   <ThreeDotsIcon />
             </Box>
         }}
